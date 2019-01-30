@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="2">Level1</layout>
+        <layout order="0">Menu</layout>
+        <layout order="4">Créditos</layout>
+        <event-sheet active="1" order="3">Level1</event-sheet>
+        <event-sheet order="1">Menu</event-sheet>
+        <event-sheet order="5">Créditos</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Piso/" />
+        <folder expanded="0" path="object-folder/Enemigos/" />
+        <folder expanded="1" path="object-folder/Menu/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/PisoH/" />
+        <folder expanded="1" path="animation-folder/PisoV/" />
+        <folder expanded="1" path="animation-folder/EnemigoFijo/" />
+        <folder expanded="1" path="animation-folder/EnemigoV/" />
+        <folder expanded="1" path="animation-folder/EnemigoH/" />
+        <folder expanded="1" path="animation-folder/ARBOL/" />
+        <folder expanded="1" path="animation-folder/Play/" />
+        <folder expanded="1" path="animation-folder/Background/" />
+        <folder expanded="1" path="animation-folder/Creditos/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Moni/" />
+        <folder expanded="1" path="animation-folder/Camara/" />
+        <folder expanded="1" path="animation-folder/checkPoint/" />
+        <folder expanded="1" path="animation-folder/movingPlataformV/" />
+        <folder expanded="1" path="animation-folder/movingPlataformH/" />
+        <folder expanded="1" path="animation-folder/BG3/" />
+        <folder expanded="1" path="animation-folder/Fuego/" />
+        <folder expanded="1" path="animation-folder/Light/" />
+        <folder expanded="1" path="animation-folder/BottomLimit/" />
+        <folder expanded="1" path="animation-folder/CollarPopUp/" />
+        <folder expanded="1" path="animation-folder/PizzaPopUp/" />
+        <folder expanded="1" path="animation-folder/MusicaPopUp/" />
+        <folder expanded="1" path="animation-folder/FotoPopUp/" />
+        <folder expanded="1" path="animation-folder/LluviaPopUp/" />
+        <folder expanded="1" path="animation-folder/checkPoint2/" />
+        <folder expanded="1" path="animation-folder/checkPoint1/" />
+        <folder expanded="1" path="animation-folder/checkPoint3/" />
+        <folder expanded="1" path="animation-folder/checkPoint4/" />
+        <folder expanded="1" path="animation-folder/checkPoint5/" />
+        <folder expanded="1" path="animation-folder/checkPoint7/" />
+        <folder expanded="1" path="animation-folder/menucred/" />
+        <folder expanded="1" path="animation-folder/LuxDomiAmarillo/" />
+        <folder expanded="1" path="animation-folder/LaMoniAnimame/" />
+        <folder expanded="1" path="animation-folder/LaMoniAnimame2/" />
+        <folder expanded="1" path="animation-folder/moni2/" />
+        <folder expanded="1" path="animation-folder/GanastePopUp/" />
+        <folder expanded="1" path="animation-folder/Final/" />
+    </folders-expanded>
+</c2uistate>

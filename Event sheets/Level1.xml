@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level1</name>
+    <events>
+        <variable constant="0" name="AuxY" sid="833546267735832" static="0" type="number">739</variable>
+        <variable constant="0" name="AuxX" sid="377637770085804" static="0" type="number">12097</variable>
+        <variable constant="0" name="FireSizeY" sid="463833476797290" static="0" type="number">47</variable>
+        <variable constant="0" name="FireSizeX" sid="887669773017428" static="0" type="number">38</variable>
+        <variable constant="0" name="posX" sid="678394303209173" static="0" type="number">259600</variable>
+        <variable constant="0" name="posY" sid="413374507827674" static="0" type="number">300</variable>
+        <variable constant="0" name="LightSize" sid="969674923438437" static="0" type="number">1500</variable>
+        <variable constant="0" name="tiempo" sid="134959543389776" static="0" type="number">0</variable>
+        <event-block sid="706237772490033">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="175652027987565" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="161746246013892" type="Camara">
+                    <param id="0" name="X">lerp(Self.X, Moni.X, 0.03)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Moni.Y-150, 0.03)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="566462431416624">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="147854390211961" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="667085747224508" type="Moni">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="136605252167714">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="936707839582600" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="231219030650056" type="Moni">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="898518635602377">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="387352596139687" type="EnemigoFijo">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="165031359374662" type="Moni">
+                    <param id="0" name="X">posX</param>
+                    <param id="1" name="Y">posY</param>
+                </action>
+                <action id="-7" name="Set size" sid="803314100208993" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="828353761805389" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="570633091229835">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="668032819299173" type="EnemigoV">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="189245167294511" type="Moni">
+                    <param id="0" name="X">posX</param>
+                    <param id="1" name="Y">posY</param>
+                </action>
+                <action id="-7" name="Set size" sid="757944773727799" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="697530360027916" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="620559654185871">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="204262138995175" type="EnemigoH">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="232543694475482" type="Moni">
+                    <param id="0" name="X">posX</param>
+                    <param id="1" name="Y">posY</param>
+                </action>
+                <action id="-7" name="Set size" sid="897685686715643" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="637349731178465" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="950074519908842">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="966349715946424" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="799956621244109" type="Moni">
+                    <param id="0" name="X">posX</param>
+                    <param id="1" name="Y">posY</param>
+                </action>
+                <action id="0" name="Play" sid="797120746023211" type="Audio">
+                    <param id="0" name="Audio file">background1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="678197642588162" type="Audio">
+                    <param id="0" name="Audio file">Fire2</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="768344404894730">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="924187223537455" type="checkPoint">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="206876186642815" type="checkPoint" />
+                <action id="-9" name="Set value" sid="520813962637692" type="System">
+                    <param id="0" name="Variable">posX</param>
+                    <param id="1" name="Value">checkPoint.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="959947234422414" type="System">
+                    <param id="0" name="Variable">posY</param>
+                    <param id="1" name="Value">checkPoint.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="796505001681659" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="134116458800190" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="958723860806695" type="System">
+                    <param id="0" name="Layer">6</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="443867364984307">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="195769437906704" type="Moni" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="826840529327337" type="Moni" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="664347418035061" type="Moni">
+                    <param id="0" name="Animation">&quot;Corre&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="139644016867807">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="285223591192196" type="Moni" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="888937345556313" type="Moni" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="552026594602535" type="Moni">
+                    <param id="0" name="Animation">&quot;Quieta&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="547559120402512">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="924796725722312" type="Moni" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="629649111950538" type="Moni">
+                    <param id="0" name="Animation">&quot;Salta&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="860603345269688">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="338782731790597" type="Moni" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="679736542175983" type="Moni">
+                    <param id="0" name="Animation">&quot;Quieta&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="922954907107823">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="568715532632414" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="167600051548074" type="Moni">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="675938787714536">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="499428130499225" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="525422317247351" type="Moni">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="145183927853232">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="730889451707923" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="301278098757110" type="Light">
+                    <param id="0" name="Pin to">Moni</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="542645778664285" type="Fuego">
+                    <param id="0" name="Pin to">Moni</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="227381549238283" type="System">
+                    <param id="0" name="Layer">6</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="633222053641293" type="System">
+                    <param id="0" name="Layer">7</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="396039456920328" type="System">
+                    <param id="0" name="Layer">8</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="954308601594190" type="System">
+                    <param id="0" name="Layer">9</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="609233052701016" type="System">
+                    <param id="0" name="Layer">10</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="284435843260898" type="System">
+                    <param id="0" name="Layer">11</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="387445485775661">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="573663668691695" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="210710002070056" type="Camara">
+                    <param id="0" name="X">lerp(Self.X, Moni.X, 0.03)</param>
+                    <param id="1" name="Y">lerp(Self.Y, Moni.Y-150, 0.03)</param>
+                </action>
+                <action id="-7" name="Set size" sid="728086802553737" type="Light">
+                    <param id="0" name="Width">Light.Width- Light.Width*(1/1200)</param>
+                    <param id="1" name="Height">Light.Height- Light.Height*(1/1200)</param>
+                </action>
+                <action id="-7" name="Set size" sid="312269624136821" type="Fuego">
+                    <param id="0" name="Width">Fuego.Width- Fuego.Width*(1/2000)</param>
+                    <param id="1" name="Height">Fuego.Height- Fuego.Height*(1/2000)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="103371108089671">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="188328345228079" type="System">
+                    <param id="0" name="First value">Light.Height</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">160</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="235293017885361" type="Light">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="575033001161380" type="Fuego">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="268382549385381" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-3" name="Set position" sid="238280001225409" type="Moni">
+                    <param id="0" name="X">165</param>
+                    <param id="1" name="Y">809</param>
+                </action>
+                <action id="-7" name="Set size" sid="876785986524457" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="230772355444127" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="921856835186096">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="960772787833587" type="System">
+                    <param id="0" name="First value">Light.Height</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">300</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="484921542779856" type="Light">
+                    <param id="0" name="Width">Light.Width- Light.Width*(1/400)</param>
+                    <param id="1" name="Height">Light.Height- Light.Height*(1/400)</param>
+                </action>
+                <action id="-7" name="Set size" sid="808816064680876" type="Fuego">
+                    <param id="0" name="Width">Fuego.Width- Fuego.Width*(1/2000)</param>
+                    <param id="1" name="Height">Fuego.Height- Fuego.Height*(1/2000)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="609861574425046">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="316043244261803" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="314459126910319" type="Moni">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="421233139079371" type="Fuego">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="475048503085882" type="Light">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="738019598874162" type="Fuego" />
+                <action id="-3" name="Set position" sid="935892804434685" type="Fuego">
+                    <param id="0" name="X">moni.X -58</param>
+                    <param id="1" name="Y">moni.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="676832726620458" type="Fuego">
+                    <param id="0" name="Pin to">Moni</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="790789009403994" type="Light" />
+                <action id="-3" name="Set position" sid="286027548003280" type="Light">
+                    <param id="0" name="X">moni.X -58</param>
+                    <param id="1" name="Y">moni.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="155487583868948" type="Light">
+                    <param id="0" name="Pin to">Moni</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="815899812922907">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="406030366769953" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="649041690248329" type="Moni">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="693278469355984" type="Fuego">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="600315096360370" type="Light">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="415403122234785" type="Fuego" />
+                <action id="-3" name="Set position" sid="614682569819222" type="Fuego">
+                    <param id="0" name="X">moni.X + 58</param>
+                    <param id="1" name="Y">moni.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="415448895214707" type="Fuego">
+                    <param id="0" name="Pin to">Moni</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="621889175337086" type="Light" />
+                <action id="-3" name="Set position" sid="285247871987879" type="Light">
+                    <param id="0" name="X">moni.X +58</param>
+                    <param id="1" name="Y">moni.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="103889194754512" type="Light">
+                    <param id="0" name="Pin to">Moni</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="472325366216984">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="263744914847606" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="816584549256954" type="EnemigoH">
+                    <param id="0" name="Instance variable">enemyState</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="6" name="Set speed" sid="810169780902495" type="EnemigoH">
+                    <param id="0" name="Speed">3</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="820930324738059" type="EnemigoH">
+                    <param id="0" name="Duration">2.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="968201669302167">
+            <conditions>
+                <condition id="-11" name="For Each" sid="438922407808548" type="System">
+                    <param id="0" name="Object">EnemigoH</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="729251746086492">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="716286279628571" type="EnemigoH">
+                            <param id="0" name="Instance variable">enemyState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="691059672576126" type="EnemigoH">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="360564300534513" type="EnemigoH">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="899199170621224">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="855184212424250" type="EnemigoH">
+                            <param id="0" name="Instance variable">enemyState</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="977619715360173" type="EnemigoH">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="811850946186900" type="EnemigoH">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="280930498279877">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="706430544090930" type="EnemigoH">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="586378134213944" type="EnemigoH">
+                    <param id="0" name="Instance variable">enemyState</param>
+                    <param id="1" name="Value">- EnemigoH.enemyState</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="627977701508373" type="EnemigoH">
+                    <param id="0" name="Duration">2.0</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="912938296643854">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="908545086864218" type="Moni">
+                    <param id="0" name="Object">BottomLimit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="995655333373477" type="Moni">
+                    <param id="0" name="X">posX</param>
+                    <param id="1" name="Y">posY</param>
+                </action>
+                <action id="-7" name="Set size" sid="964672363225435" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="187330523335640" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="532178921408843">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="568741750288382" type="Moni" />
+                <condition id="2" name="Key is down" sid="132344655362065" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="285343338061028" type="System">
+                    <param id="0" name="Interval (seconds)">0.4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="534983784845746" type="Audio">
+                    <param id="0" name="Audio file">paso-grama-1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-25</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="312664705138506">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="337434702622327" type="Moni" />
+                <condition id="2" name="Key is down" sid="197730732826490" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="157462407542204" type="System">
+                    <param id="0" name="Interval (seconds)">0.4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="198091731966259" type="Audio">
+                    <param id="0" name="Audio file">paso-grama-1</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-25</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="742881968404133">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="865009912286727" type="checkPoint1">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="210700197184358" type="checkPoint1" />
+                <action id="-9" name="Set value" sid="979294536074706" type="System">
+                    <param id="0" name="Variable">posX</param>
+                    <param id="1" name="Value">checkPoint1.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="278148966382660" type="System">
+                    <param id="0" name="Variable">posY</param>
+                    <param id="1" name="Value">checkPoint1.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="173651922473240" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="588020966263518" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="543715897095982" type="System">
+                    <param id="0" name="Layer">6</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="912279668378180">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="821674092597045" type="System">
+                    <param id="0" name="Layer">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="592760192049702" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="565067393849488" type="System">
+                    <param id="0" name="Layer">6</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="267386554529051">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="771635517744838" type="checkPoint2">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="480158760000079" type="checkPoint2" />
+                <action id="-9" name="Set value" sid="499832152658505" type="System">
+                    <param id="0" name="Variable">posX</param>
+                    <param id="1" name="Value">checkPoint2.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="715653593324774" type="System">
+                    <param id="0" name="Variable">posY</param>
+                    <param id="1" name="Value">checkPoint2.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="127450734100516" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="872765662220391" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="311139719042329" type="System">
+                    <param id="0" name="Layer">7</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="669658995229103">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="985083842685461" type="System">
+                    <param id="0" name="Layer">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="986956448808200" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="339850405401571" type="System">
+                    <param id="0" name="Layer">7</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="937149428522409">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="452419134436753" type="checkPoint3">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="671976428415282" type="checkPoint3" />
+                <action id="-9" name="Set value" sid="154928992616234" type="System">
+                    <param id="0" name="Variable">posX</param>
+                    <param id="1" name="Value">checkPoint3.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="868547996138765" type="System">
+                    <param id="0" name="Variable">posY</param>
+                    <param id="1" name="Value">checkPoint3.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="215410043762615" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="833182135831483" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="170300073637717">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="545203800079420" type="checkPoint4">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="659746405606712" type="checkPoint4" />
+                <action id="-9" name="Set value" sid="132473170019452" type="System">
+                    <param id="0" name="Variable">posX</param>
+                    <param id="1" name="Value">checkPoint4.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="102865163064428" type="System">
+                    <param id="0" name="Variable">posY</param>
+                    <param id="1" name="Value">checkPoint4.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="441416462702123" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="864140010040025" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="526771117963246" type="System">
+                    <param id="0" name="Layer">8</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="437272132014509">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="737851234986479" type="System">
+                    <param id="0" name="Layer">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="294048668989170" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="229321019556453" type="System">
+                    <param id="0" name="Layer">8</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="447474782745314">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="619305816074879" type="checkPoint5">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="566142537890416" type="checkPoint5" />
+                <action id="-9" name="Set value" sid="913317471592056" type="System">
+                    <param id="0" name="Variable">posX</param>
+                    <param id="1" name="Value">checkPoint5.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="914454585217306" type="System">
+                    <param id="0" name="Variable">posY</param>
+                    <param id="1" name="Value">checkPoint5.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="834803784356002" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="407640014893157" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="596499787409423" type="System">
+                    <param id="0" name="Layer">9</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="557567478066210">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="957486195730154" type="System">
+                    <param id="0" name="Layer">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="287206741349158" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="443020014741986" type="System">
+                    <param id="0" name="Layer">9</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="818296322946731">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="822174802135138" type="checkPoint7">
+                    <param id="0" name="Object">Moni</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="512664957172817" type="checkPoint7" />
+                <action id="-9" name="Set value" sid="369248779789571" type="System">
+                    <param id="0" name="Variable">posX</param>
+                    <param id="1" name="Value">checkPoint7.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="950156290561214" type="System">
+                    <param id="0" name="Variable">posY</param>
+                    <param id="1" name="Value">checkPoint7.Y</param>
+                </action>
+                <action id="-7" name="Set size" sid="434813265451889" type="Light">
+                    <param id="0" name="Width">LightSize</param>
+                    <param id="1" name="Height">LightSize</param>
+                </action>
+                <action id="-7" name="Set size" sid="420833637830809" type="Fuego">
+                    <param id="0" name="Width">FireSizeX</param>
+                    <param id="1" name="Height">FireSizeY</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="544250639466131" type="System">
+                    <param id="0" name="Layer">10</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="385770067416977">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="841340351835117" type="System">
+                    <param id="0" name="Layer">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="450919561742009" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="430436295268339" type="System">
+                    <param id="0" name="Layer">10</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="837757817758603">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="931840716417211" type="System">
+                    <param id="0" name="Interval (seconds)">0.2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="344877626475284" type="checkPoint3">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="106219754581299">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="235888288260868" type="Mouse">
+                    <param id="0" name="Object">menucred</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="940562066051658" type="menucred">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="356168132203790">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="348366395208419" type="Mouse">
+                    <param id="0" name="Object">menucred</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="632107763319297" type="menucred">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="934171332048787">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="732570409640238" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">menucred</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="125113339327763" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="509723526769450">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="853136302607803" type="Moni">
+                    <param id="0" name="Object">Final</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="115559779093275" type="System">
+                    <param id="0" name="Layer">11</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

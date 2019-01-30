@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <variable constant="0" name="IRALJUEGO" sid="239599567894971" static="0" type="number">0</variable>
+        <event-block sid="745049970747708">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="590052452117346" type="Mouse">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="351034087892723" type="Play">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="151088732098674">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="564288499689168" type="Mouse">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="484610937809598" type="Play">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="536898972301636">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="929490008291962" type="Mouse">
+                    <param id="0" name="Object">Creditos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="170204447016476" type="Creditos">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="176690896871097">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="383567830861880" type="Mouse">
+                    <param id="0" name="Object">Creditos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="593385682955993" type="Creditos">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="760277875986444">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="274845378903581" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Creditos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="705419030109858" type="System">
+                    <param id="0" name="Layout">Créditos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="142801825542491">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="231833848988119" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="540834336955388" type="Mouse">
+                    <param id="0" name="Object">Play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="957256864920210" type="Play">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="719424606263052" type="System">
+                    <param id="0" name="Variable">IRALJUEGO</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="619665595594450">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="373978716131231" type="System">
+                    <param id="0" name="Variable">IRALJUEGO</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="475214466723281" type="System">
+                    <param id="0" name="Layout">Level1</param>
+                </action>
+                <action id="-9" name="Set value" sid="503055900046780" type="System">
+                    <param id="0" name="Variable">IRALJUEGO</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="629088883428273">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="903925357350236" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="463028732884238" type="Audio">
+                    <param id="0" name="Audio file">background1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
