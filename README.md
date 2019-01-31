@@ -6,5 +6,16 @@ Platform game in 2D, developed in Construct2 for the Global Game Jam 2019 at Uni
 
 GGJ Link: [Lux Domi @ Global Game Jam](https://globalgamejam.org/2019/games/lux-domi)
 
+
+
+<br />
+## Read More
+
+You can read more about the game and my experience at Global Game Jam 2019 on my website, in the following links:
+
+- [About the Game](https://fergamboa.netlify.com/project/ggj19-luxdomi/)
+- [Attending GGJ 2019](https://fergamboa.netlify.com/post/ggj2019/)
+
+
 ![](/Files/LuxDomi.png)
 
